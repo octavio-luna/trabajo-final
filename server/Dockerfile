@@ -1,4 +1,4 @@
-FROM node:9.11.1
+FROM node:lts-buster-slim
 
 WORKDIR /app
 
@@ -8,4 +8,3 @@ RUN npm install
 
 COPY . .
 
-RUN npm run serve

@@ -9,7 +9,7 @@ require('dotenv').config();
 // Configuring port
 const port = process.env.PORT || 9000;
 
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/express-mongo';
+const mongoUri = process.env.MONGO_URI || 'mongodb://mongo:27017/express-mongo';
 
 // Create an Express app
 const app = express();
