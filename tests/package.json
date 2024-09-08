@@ -1,0 +1,12 @@
+{
+    "name": "cypress-test-project",
+    "version": "1.0.0",
+    "description": "Project for running Cypress integration tests",
+    "scripts": {
+        "test": "cypress run --spec './integration_tests.js'"
+    },
+    "devDependencies": {
+        "cypress": "^12.17.4",
+        "cypress-file-upload": "^5.0.8"
+    }
+}

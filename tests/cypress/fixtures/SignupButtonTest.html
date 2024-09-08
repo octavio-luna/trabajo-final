@@ -1,0 +1,215 @@
+<html lang="en"><head> <script type="text/javascript"> document.domain = 'localhost'; (()=>{"use strict";const e=window.Cypress=parent.Cypress;if(!e)throw new Error("Something went terribly wrong and we cannot proceed. We expected to find the global Cypress in the parent window but it is missing. This should never happen and likely is a bug. Please open an issue.");const t=(()=>{let e,t,n,r;const i=()=>{e=!1,t=!1,n=[],r={}},o=(e,t=[])=>"function"==typeof e?e.apply(window,t):window.eval(e);return i(),{wrap:()=>{const i={setTimeout:window.setTimeout,setInterval:window.setInterval,requestAnimationFrame:window.requestAnimationFrame,clearTimeout:window.clearTimeout,clearInterval:window.clearInterval},a=(e,t)=>i[e].apply(window,t),s=e=>n=>(t&&(r[n]=!0),a(e,[n])),w=t=>(...r)=>{let i,[s,w,...p]=r;return i=a(t,[(...r)=>{if(!e)return o(s,r);n.push({timerId:i,fnOrCode:s,params:r,type:t})},w,...p]),i};window.setTimeout=w("setTimeout"),window.setInterval=w("setInterval"),window.requestAnimationFrame=w("requestAnimationFrame"),window.clearTimeout=s("clearTimeout"),window.clearInterval=s("clearInterval")},reset:i,pause:a=>{e=Boolean(a),e||(t=!0,n.forEach((e=>{const{timerId:t,type:n,fnOrCode:i,params:a}=e;"setInterval"===n&&r[t]||o(i,a)})),i())}}})();e.removeAllListeners("app:timers:reset"),e.removeAllListeners("app:timers:pause"),e.on("app:timers:reset",t.reset),e.on("app:timers:pause",t.pause),t.wrap(),e.action("app:window:before:load",window)})(); </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
+    <title>Default template</title>
+  <link href="/js/app.js" rel="preload" as="script"><link href="/js/chunk-vendors.js" rel="preload" as="script"><style type="text/css">
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+</style><style type="text/css">
+/* Estilos básicos para el formulario de login */
+.login[data-v-26084dc2] {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login h2[data-v-26084dc2] {
+  text-align: center;
+}
+.login form div[data-v-26084dc2] {
+  margin-bottom: 1em;
+}
+.login form div label[data-v-26084dc2] {
+  margin-bottom: .5em;
+  color: #333333;
+  display: block;
+}
+.login form div input[data-v-26084dc2] {
+  border: 1px solid #CCCCCC;
+  padding: .5em;
+  font-size: 1em;
+  border-radius: 4px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.login button[data-v-26084dc2] {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.login button[data-v-26084dc2]:hover {
+  background-color: #0056b3;
+}
+.signup-link[data-v-26084dc2] {
+  margin-top: 1em;
+  text-align: center;
+}
+.signup-link button[data-v-26084dc2] {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.signup-link button[data-v-26084dc2]:hover {
+  color: #0056b3;
+}
+</style><style type="text/css">
+/* Estilos básicos para el formulario de registro */
+.signup[data-v-024d905c] {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.signup h2[data-v-024d905c] {
+  text-align: center;
+}
+.signup form div[data-v-024d905c] {
+  margin-bottom: 1em;
+}
+.signup form div label[data-v-024d905c] {
+  margin-bottom: .5em;
+  color: #333333;
+  display: block;
+}
+.signup form div input[data-v-024d905c] {
+  border: 1px solid #CCCCCC;
+  padding: .5em;
+  font-size: 1em;
+  border-radius: 4px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.signup button[data-v-024d905c] {
+  padding: 0.7em;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.signup button[data-v-024d905c]:hover {
+  background-color: #0056b3;
+}
+</style><style type="text/css">
+.todo-item[data-v-aa9e476e] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
+}
+.todo-item span.completed[data-v-aa9e476e] {
+  color: green;
+}
+.todo-item span.pending[data-v-aa9e476e] {
+  color: red;
+}
+button[data-v-aa9e476e] {
+  margin-left: 1em;
+}
+</style><style type="text/css">
+.todos[data-v-5e28c083] {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+.navbar[data-v-5e28c083] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #343a40; /* Gris oscuro */
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+.navbar h2[data-v-5e28c083] {
+  margin: 0;
+}
+.logout-button[data-v-5e28c083] {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #dc3545; /* Rojo */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.logout-button[data-v-5e28c083]:hover {
+  background-color: #c82333; /* Rojo oscuro */
+}
+.new-todo[data-v-5e28c083] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+.new-todo input[data-v-5e28c083] {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0.5em;
+  margin-right: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.new-todo button[data-v-5e28c083] {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.new-todo button[data-v-5e28c083]:hover {
+  background-color: #0056b3;
+}
+.todo-list[data-v-5e28c083] {
+  border-top: 1px solid #ccc;
+}
+</style></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but it doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"><div data-v-26084dc2="" class="login"><h2 data-v-26084dc2="">Login</h2><form data-v-26084dc2=""><div data-v-26084dc2=""><label data-v-26084dc2="" for="email">Email:</label><input data-v-26084dc2="" type="email" id="email" required="required"></div><div data-v-26084dc2=""><label data-v-26084dc2="" for="password">Password:</label><input data-v-26084dc2="" type="password" id="password" required="required"></div><button data-v-26084dc2="" type="submit">Login</button></form><div data-v-26084dc2="" class="signup-link"><button data-v-26084dc2="">Registrarse</button></div></div></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="/js/chunk-vendors.js"></script><script type="text/javascript" src="/js/app.js"></script>
+
+</body></html>
