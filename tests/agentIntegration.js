@@ -27,4 +27,6 @@ async function tests() {// list the files under the cypress/fixtures directory
 
 }
 
+console.log("Running tests");
 tests();
+console.log("Finished running tests");
