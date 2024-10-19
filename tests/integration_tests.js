@@ -20,7 +20,7 @@ describe('SignupButtonTest', () => {
         const html = doc.documentElement.outerHTML;
         cy.writeFile(`cypress/fixtures/SignupButtonTest.html`, html);
         });
-      cy.url().should('include', '/sinup');
+      cy.url().should('include', '/signup');
     });
   });
   
