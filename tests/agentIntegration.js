@@ -21,7 +21,7 @@ async function tests() {// list the files under the cypress/fixtures directory
             fileContent = fs.readFileSync(fileName.replace('.html', '.js'), 'utf8');
             console.log("fileContent: ", fileContent);
         } catch (err) {
-            console.error("Error reading js file: ", err, "fileName: ", fileName.replace('.html', '.js'));
+            console.error("Error reading js file: ", err, "fileName: ", fileName.replace('.html', '.spec.js'));
         }
     }
 
