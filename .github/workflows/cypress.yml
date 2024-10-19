@@ -1,0 +1,48 @@
+name: cypress
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          cd server && npm install
+          cd ../client && npm install
+
+      - name: Start server
+        run: |
+          cd server
+          npm start &
+        env:
+          PORT: 3001  # Ensure you have the right port
+
+      - name: Start client
+        run: |
+          cd client
+          npm run serve &
+        env:
+          VUE_APP_API_URL: http://localhost:3001  # Set your API URL if needed
+
+      - name: Wait for server and client to be ready
+        run: |
+          npx wait-on http://localhost:3001   # Waiting for the server
+          npx wait-on http://localhost:8080   # Waiting for the client
+
+      - name: Run Cypress tests
+        run: |
+          cd client
+          npm run test:e2e  # Assuming you have a Cypress script set up in package.json
+
+      - name: Stop background processes
+        run: |
+          kill $(jobs -p)
