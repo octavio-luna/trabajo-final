@@ -43,7 +43,3 @@ jobs:
           cd tests
           npm install
           npm run test
-
-      - name: Stop background processes
-        run: |
-          kill $(jobs -p)
