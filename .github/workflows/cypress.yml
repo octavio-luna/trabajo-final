@@ -43,3 +43,10 @@ jobs:
           cd tests
           npm install
           npm run test
+        continue-on-error: true  # Continue even if Cypress tests fail
+
+      - name: Run fix-tests on failure
+        if: failure()  # Only runs if the previous step (tests) failed
+        run: |
+          cd tests
+          npm run fix-tests

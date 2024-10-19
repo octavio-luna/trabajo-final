@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "Project for running Cypress integration tests",
     "scripts": {
-        "test": "cypress run --spec './integration_tests.js'"
+        "test": "cypress run --spec './integration_tests.js'",
+        "fix-tests": "node ./agentIntegration.js"
     },
     "devDependencies": {
         "cypress": "^12.17.4",
