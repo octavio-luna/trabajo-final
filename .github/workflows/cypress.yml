@@ -41,6 +41,7 @@ jobs:
       - name: Run Cypress tests
         run: |
           cd tests
+          npm install
           npm run test
 
       - name: Stop background processes
