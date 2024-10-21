@@ -4,7 +4,7 @@ module.exports = {
       setupNodeEvents(on, config) {
         // implement node event listeners here
       },
-      specPattern: './integration_tests.js',
+      specPattern: './*.spec.js',
       supportFile: false, 
     },
   };

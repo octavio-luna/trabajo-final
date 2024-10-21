@@ -3,11 +3,14 @@
     "version": "1.0.0",
     "description": "Project for running Cypress integration tests",
     "scripts": {
-        "test": "cypress run --spec './SignupButtonTest.js'",
+        "test": "cypress run --spec 'SignupButtonTest.spec.js'",
         "fix-tests": "node ./agentIntegration.js"
     },
     "devDependencies": {
         "cypress": "^12.17.4",
         "cypress-file-upload": "^5.0.8"
+    },
+    "dependencies": {
+        "openai": "^4.68.1"
     }
 }
