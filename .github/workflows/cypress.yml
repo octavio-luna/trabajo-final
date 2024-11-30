@@ -39,12 +39,16 @@ jobs:
           npx wait-on http://localhost:8080   # Waiting for the client
 
       - name: Run Cypress tests
+        env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           cd tests
           npm install
           npm run test
 
       - name: Run fix-tests on failure
+         env:
+              OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         if: failure()  # Only runs if the previous step (tests) failed
         run: |
           cd tests
