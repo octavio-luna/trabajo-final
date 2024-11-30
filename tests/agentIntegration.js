@@ -80,7 +80,7 @@ async function createPullRequest() {
         
         // Add GitHub to known hosts
         console.log('Adding GitHub to known hosts...');
-        execSync('ssh-keyscan github.com >> ~/.ssh/known_hosts', { stdio: 'inherit' });
+        //execSync('ssh-keyscan github.com >> ~/.ssh/known_hosts', { stdio: 'inherit' });
 
         // Push the changes to the new branch
         console.log(`Pushing changes to the new branch: ${currentBranch}`);
