@@ -46,7 +46,7 @@ async function tests() {// list the files under the cypress/fixtures directory
             if (response.includes('```')) {
                 response = response.replace('```', '');
             }
-            fs.writeFileSync(fileName.replace('.html', '.new.spec.js'), response)//.choices[0].message.content);
+            fs.writeFileSync(fileName.replace('.html', '.spec.js'), response)//.choices[0].message.content);
         }
     } catch(e) {
         console.error("Error reading fixtures directory: ", e);
