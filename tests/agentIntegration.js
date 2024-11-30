@@ -38,15 +38,16 @@ async function tests() {// list the files under the cypress/fixtures directory
                     { role: 'user', content: htmlFile }
                 ]
             });
-            console.log("response: ", response.choices[0].message.content)    
+            console.log("response: ", response.choices[0].message.content)
             //check if contains ```javascript or ``` and remove it
-            if (response.includes('```javascript')) {
-                response = response.replace('```javascript', '');
+            let responseString = response.choices[0].message.content;
+            if (responseString.includes('```javascript')) {
+                responseString = responseString.replace('```javascript', '');
             }
-            if (response.includes('```')) {
-                response = response.replace('```', '');
+            if (responseString.includes('```')) {
+                responseString = responseString.replace('```', '');
             }
-            fs.writeFileSync(fileName.replace('.html', '.spec.js'), response)//.choices[0].message.content);
+            fs.writeFileSync(fileName.replace('.html', '.spec.js'), responseString)
         }
     } catch(e) {
         console.error("Error reading fixtures directory: ", e);
