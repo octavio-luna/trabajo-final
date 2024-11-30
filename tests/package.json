@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Project for running Cypress integration tests",
     "scripts": {
-        "test": "cypress run --spec 'SignupButtonTest.spec.js'",
+        "test": "cypress run --spec '*.spec.js'",
         "fix-tests": "node ./agentIntegration.js"
     },
     "devDependencies": {
