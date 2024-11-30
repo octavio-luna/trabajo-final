@@ -47,8 +47,8 @@ jobs:
           npm run test
 
       - name: Run fix-tests on failure
-         env:
-              OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         if: failure()  # Only runs if the previous step (tests) failed
         run: |
           cd tests
