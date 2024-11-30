@@ -70,6 +70,9 @@ async function createPullRequest() {
         // Add all files to git
         console.log('Adding files to git...');
         execSync('git add .');
+
+        execSync('git config --global user.email "octavioluna@gmail.com"')
+        execSync('git config --global user.name "Octavio Luna"')
         
         // Commit the changes
         console.log('Committing changes...');
