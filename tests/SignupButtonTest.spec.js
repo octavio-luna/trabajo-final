@@ -18,10 +18,6 @@ describe('SignupButtonTest', () => {
       cy.get('.signup-link button').click();
       
       // Check if the URL is correct
-      cy.document().then(doc => {
-        const html = doc.documentElement.outerHTML;
-        cy.writeFile(`cypress/fixtures/${TestName}.html`, html);
-        });
-      cy.url().should('include', '/sinup');
+      cy.url().should('include', '/signup');
     });
   });
