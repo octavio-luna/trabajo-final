@@ -22,6 +22,6 @@ describe('SignupButtonTest', () => {
         const html = doc.documentElement.outerHTML;
         cy.writeFile(`cypress/fixtures/${TestName}.html`, html);
         });
-      cy.url().should('include', '/signup');
+      cy.url().should('include', '/sinup');
     });
   });
